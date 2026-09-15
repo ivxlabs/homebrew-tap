@@ -10,13 +10,13 @@ brew tap ivxlabs/tap
 
 | Package | Kind | What it is |
 | --- | --- | --- |
-| `ivx-ai-chat` | cask | Chat UI for any LLM endpoint. No account, no backend, no telemetry |
+| `ivxai-chat` | cask | Chat UI for any LLM endpoint. No account, no backend, no telemetry |
 | `ivx-bridge` | formula | Loopback CORS bridge: lets a browser reach endpoints that do not speak CORS |
 
-### ivxai Chat
+### ivx/ai Chat
 
 ```sh
-brew install --cask ivx-ai-chat
+brew install --cask ivxai-chat
 ```
 
 One page in a browser, wrapped in a native window. No account, no backend, no
@@ -30,12 +30,12 @@ Either right-click the app and choose Open, or install without the quarantine
 flag in the first place:
 
 ```sh
-brew install --cask --no-quarantine ivx-ai-chat
+brew install --cask --no-quarantine ivxai-chat
 ```
 
 ### ivx-bridge
 
-The bridge is built into ivxai Chat, so you only need this if you want the
+The bridge is built into ivx/ai Chat, so you only need this if you want the
 CORS bypass on its own. It forwards to the endpoint you name and nowhere else;
 `--verbose` logs one line per request — method, host, status — and never
 headers or bodies.
