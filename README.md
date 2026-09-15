@@ -13,7 +13,7 @@ brew tap ivxlabs/tap
 | `ivx-ai-chat` | cask | Chat UI for any LLM endpoint. No account, no backend, no telemetry |
 | `ivx-bridge` | formula | Loopback CORS bridge: lets a browser reach endpoints that do not speak CORS |
 
-### ivx AI Chat
+### ivxai Chat
 
 ```sh
 brew install --cask ivx-ai-chat
@@ -35,7 +35,7 @@ brew install --cask --no-quarantine ivx-ai-chat
 
 ### ivx-bridge
 
-The bridge is built into ivx AI Chat, so you only need this if you want the
+The bridge is built into ivxai Chat, so you only need this if you want the
 CORS bypass on its own. It forwards to the endpoint you name and nowhere else;
 `--verbose` logs one line per request — method, host, status — and never
 headers or bodies.
