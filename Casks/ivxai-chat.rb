@@ -1,15 +1,17 @@
 # Rendered by .github/workflows/homebrew.yml and pushed to ivxlabs/homebrew-tap
-# as Casks/ivxai-chat.rb. 0.1.2 and f5d15d9a149d6d8d8ba40f3cbc9b822f775d2c232f8be82974f89fc263d67df9 are filled in there.
+# as Casks/ivxai-chat.rb. 0.2.0 and 6ac5ca9fd199c532cf204b8cb09eadbcd07f98a5caa726b6f3be7855a33c32be are filled in there.
 cask "ivxai-chat" do
-  version "0.1.2"
-  sha256 "f5d15d9a149d6d8d8ba40f3cbc9b822f775d2c232f8be82974f89fc263d67df9"
+  version "0.2.0"
+  sha256 "6ac5ca9fd199c532cf204b8cb09eadbcd07f98a5caa726b6f3be7855a33c32be"
 
   url "https://github.com/ivxlabs/ivxai-app/releases/download/v#{version}/ivxai-chat-v#{version}-macos-universal.dmg"
   name "ivx/ai Chat"
   desc "Chat UI for any LLM endpoint: no account, no backend, no telemetry"
   homepage "https://github.com/ivxlabs/ivxai-app"
 
-  depends_on macos: ">= :big_sur"
+  # A bare symbol is the minimum version; the ">= :big_sur" string form is
+  # deprecated.
+  depends_on macos: :big_sur
 
   app "ivxai Chat.app"
 
