@@ -1,13 +1,13 @@
 # Rendered by .github/workflows/homebrew.yml and pushed to ivxlabs/homebrew-tap
-# as Formula/ivx-bridge.rb. 0.2.0 and 37893a7c54dcd605d69818dba7b4efa0d494aa8cc7a966b97caa759a5ec290d0 are filled in there.
+# as Formula/ivx-bridge.rb. 0.2.1 and 63ec341612853e39209f323424a38365920795eeb7628224356d37402eba88d9 are filled in there.
 class IvxBridge < Formula
   desc "Loopback CORS bridge for any LLM endpoint: logs no headers or bodies"
   homepage "https://github.com/ivxlabs/ivxai-app"
-  version "0.2.0"
+  version "0.2.1"
   license "GPL-3.0-or-later"
 
   url "https://github.com/ivxlabs/ivxai-app/releases/download/v#{version}/ivx-bridge-v#{version}-macos-universal.tar.gz"
-  sha256 "37893a7c54dcd605d69818dba7b4efa0d494aa8cc7a966b97caa759a5ec290d0"
+  sha256 "63ec341612853e39209f323424a38365920795eeb7628224356d37402eba88d9"
 
   # The tarball holds a macOS universal binary, so this is not installable on
   # Linuxbrew even though the bridge itself builds fine on Linux.
