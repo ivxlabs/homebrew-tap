@@ -11,7 +11,7 @@ brew tap ivxlabs/tap
 | Package | Kind | What it is |
 | --- | --- | --- |
 | `ivxai-chat` | cask | Chat UI for any LLM endpoint. No account, no backend, no telemetry |
-| `ivx-bridge` | formula | Loopback CORS bridge: lets a browser reach endpoints that do not speak CORS |
+| `ivxai-bridge` | formula | Loopback CORS bridge: lets a browser reach endpoints that do not speak CORS |
 
 ### ivx/ai Chat
 
@@ -33,7 +33,7 @@ flag in the first place:
 brew install --cask --no-quarantine ivxai-chat
 ```
 
-### ivx-bridge
+### ivxai-bridge
 
 The bridge is built into ivx/ai Chat, so you only need this if you want the
 CORS bypass on its own. It forwards to the endpoint you name and nowhere else;
@@ -41,8 +41,8 @@ CORS bypass on its own. It forwards to the endpoint you name and nowhere else;
 headers or bodies.
 
 ```sh
-brew install ivx-bridge
-brew services start ivx-bridge   # keeps it running, and again at login
+brew install ivxai-bridge
+brew services start ivxai-bridge   # keeps it running, and again at login
 ```
 
 macOS only: the download is a universal Mach-O binary. On Linux, build the
