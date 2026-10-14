@@ -1,8 +1,8 @@
 # Rendered by .github/workflows/homebrew.yml and pushed to ivxlabs/homebrew-tap
-# as Casks/ivxai-chat.rb. 0.3.1 and 893b3189981865b39ffb25b23ba1e741a3e1c72f6ec5a010fe2e3456727fc231 are filled in there.
+# as Casks/ivxai-chat.rb. 0.3.2 and b9b33db385a9d41f455d31a67a2e980c78f2bcb79b59be7baedd407bd0753d28 are filled in there.
 cask "ivxai-chat" do
-  version "0.3.1"
-  sha256 "893b3189981865b39ffb25b23ba1e741a3e1c72f6ec5a010fe2e3456727fc231"
+  version "0.3.2"
+  sha256 "b9b33db385a9d41f455d31a67a2e980c78f2bcb79b59be7baedd407bd0753d28"
 
   url "https://github.com/ivxlabs/ivxai-app/releases/download/v#{version}/ivxai-chat-v#{version}-macos-universal.dmg"
   name "ivx/ai Chat"
