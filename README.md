@@ -12,6 +12,7 @@ brew tap ivxlabs/tap
 | --- | --- | --- |
 | `ivxai-chat` | cask | Chat UI for any LLM endpoint. No account, no backend, no telemetry |
 | `ivxai-bridge` | formula | Loopback CORS bridge: lets a browser reach endpoints that do not speak CORS |
+| `viper` | formula | Analysis engine for Difflicit: writes up the changes between two versions as diffmd |
 
 ### ivx/ai Chat
 
@@ -48,13 +49,32 @@ brew services start ivxai-bridge   # keeps it running, and again at login
 macOS only: the download is a universal Mach-O binary. On Linux, build the
 crate from source instead.
 
+### Viper
+
+```sh
+brew install viper
+viper old/libfoo new/libfoo -o analysis.diffmd   # two files or folders
+git diff v1.0 v1.1 | viper --patch -             # a patch you already have
+```
+
+An analysis engine for [Difflicit](https://github.com/ivxlabs/difflicit): give
+it two versions of something — files, folders, binaries — and it writes up
+what changed between them as diffmd, Markdown with the patches in it. It works
+on its own, and Difflicit finds it on your PATH: pick **Viper** as the engine
+when you Analyze. Binaries are compared function by function with radare2
+(`brew install radare2`). MIT-licensed, so you can build your own engine on it.
+
+macOS (universal) and Linux (x86-64). Docs:
+[ivx.run/docs/difflicit/viper](https://ivx.run/docs/difflicit/viper/).
+
 ## About the contents
 
 Everything under `Casks/` and `Formula/` is generated. Each product repository
 owns the template for its own package and pushes the rendered file here from CI
-when a release is published — for the two above, that is
-`packaging/homebrew/` and `.github/workflows/homebrew.yml` in
-[ivxlabs/ivxai-app](https://github.com/ivxlabs/ivxai-app).
+when a release is published, from `packaging/homebrew/` and
+`.github/workflows/homebrew.yml`: in
+[ivxlabs/ivxai-app](https://github.com/ivxlabs/ivxai-app) for ivx/ai Chat and
+the bridge, and in [ivxlabs/viper](https://github.com/ivxlabs/viper) for Viper.
 
 Edit the template in the product repository, not the file here, or the next
 release will overwrite your change.
